@@ -24,12 +24,12 @@ const schema = buildSchema(`
 	type Order {
 		date: String
 		subtotal: Float!
-		item: [OrderItem]
+		items: [OrderItem]
 	}
 
 	type OrderItem {
 		product: Product!
-		quatity: Int!
+		quantity: Int!
 	} 
 `)
 
@@ -58,7 +58,7 @@ const root = {
 						description: 'Old Red Shoe',
 						price: 45.11,
 					},
-					quatity: 2,
+					quantity: 2,
 				}
 			]
 		}
