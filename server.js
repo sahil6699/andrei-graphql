@@ -5,10 +5,34 @@ const {graphqlHTTP} = require("express-graphql")
 
 const schema = buildSchema(`
 	type Query {
-		description: String
-		price: Float
+		products: [Product]
+		order: [Order]
 	}
+
+	type Product {
+		id: ID!
+		description: String!
+		reviews: [Review]
+		price: Float!
+	}
+
+	type Review {
+		rating: Int!
+		comment: String
+	}
+
+	type Order {
+		date: String
+		subtotal: Float!
+		item: [OrderItem]
+	}
+
+	type OrderItem {
+		price: Product!
+		quatity: Int!
+	} 
 `)
+
 
 const root = {
 	description: "Red Shoe",
