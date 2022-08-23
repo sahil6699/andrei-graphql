@@ -5,11 +5,11 @@ const orders = [
     items: [
       {
         product: {
-          id: 'redshoe',
+          id: 'redshow',
           description: 'Old Red Shoe',
-          price: 45.11,
+          price: 45.99,
         },
-        quantity: 2,
+        quantity: 6,
       },
     ],
   },

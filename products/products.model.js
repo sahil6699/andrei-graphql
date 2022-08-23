@@ -2,12 +2,12 @@ const products = [
   {
     id: 'redshoe',
     description: 'Red Shoe',
-    price: 42.12,
+    price: 42.99,
   },
   {
     id: 'bluejean',
     description: 'Blue Jeans',
-    price: 55.55,
+    price: 59.99,
   },
 ]
 

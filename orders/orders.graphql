@@ -3,7 +3,7 @@ type Query {
 }
 
 type Order {
-  date: String
+  date: String!
   subtotal: Float!
   items: [OrderItem]
 }
