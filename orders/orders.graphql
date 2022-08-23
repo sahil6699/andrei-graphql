@@ -1,16 +1,14 @@
 type Query {
-	products: [Product]
-	orders: [Order]
+  orders: [Order]
 }
 
-
 type Order {
-	date: String
-	subtotal: Float!
-	items: [OrderItem]
+  date: String
+  subtotal: Float!
+  items: [OrderItem]
 }
 
 type OrderItem {
-	product: Product!
-	quantity: Int!
+  product: Product!
+  quantity: Int!
 }
