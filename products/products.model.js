@@ -11,23 +11,23 @@ const products = [
     price: 59.99,
     reviews: [],
   },
-]
+];
 
 const getAllProducts = () => {
-  return products
-}
+  return products;
+};
 
 const getProductsByPrice = (min, max) => {
   return products.filter((product) => {
-    return product.price >= min && product.price <= max
-  })
-}
+    return product.price >= min && product.price <= max;
+  });
+};
 
 const getProductById = (id) => {
   return products.find((product) => {
-    return product.id === id
-  })
-}
+    return product.id === id;
+  });
+};
 
 const addNewProduct = (id, description, price) => {
   const newProduct = {
@@ -35,15 +35,29 @@ const addNewProduct = (id, description, price) => {
     price,
     description,
     reviews: [],
-  }
+  };
 
-  products.push(newProduct)
-  return newProduct
-}
+  products.push(newProduct);
+  return newProduct;
+};
+const addNewProductReview = (id, rating, comment) => {
+  const matchedProduct = getProductById(id);
+
+  if (matchedProduct) {
+    const newProductReview = {
+      rating,
+      comment,
+    };
+
+    matchedProduct.reviews.push(newProductReview);
+    return newProductReview;
+  }
+};
 
 module.exports = {
   getAllProducts,
   getProductsByPrice,
   getProductById,
   addNewProduct,
-}
+  addNewProductReview,
+};
